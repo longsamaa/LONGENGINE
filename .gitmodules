@@ -1,0 +1,3 @@
+[submodule "Long/vendor/spdlog"]
+	path = Long/vendor/spdlog
+	url = https://github.com/gabime/spdlog
