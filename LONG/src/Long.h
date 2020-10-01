@@ -10,3 +10,6 @@
 // ------Entry Point-----------
 #include "Long/EntryPoint.h"
 // ------Entry Point-----------
+
+// ----Key Event------
+#include "Long/Events/Event.h"

@@ -1,5 +1,6 @@
 #pragma once
 #include "Core.h"
+
 namespace Long {
 	class LONG_API Application
 	{

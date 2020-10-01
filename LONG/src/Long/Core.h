@@ -1,5 +1,4 @@
 #pragma once
-
 #ifdef LONG_PLATFORM_WINDOWS
 	#ifdef LONG_BUILD_DLL
 		#define LONG_API __declspec(dllexport)
@@ -10,3 +9,4 @@
 #error Long only supports Windows!
 #endif // LONG_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)
