@@ -1,3 +1,4 @@
+#include "Longpch.h"
 #include "Log.h"
 
 namespace Long

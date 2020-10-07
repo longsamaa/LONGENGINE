@@ -1,7 +1,6 @@
 #pragma once
 #include "../Core.h"
-#include <functional>
-#include <string>
+#include "Longpch.h"
 
 namespace Long {
 
@@ -35,13 +34,14 @@ namespace Long {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-	class Event
+	class LONG_API Event
 	{
 		friend class EventDispatcher;
 	public:
 		/*virtual ~Event() = default;*/
 
 		/*bool Handled = false;*/
+		bool Handled = false;
 
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -49,7 +49,7 @@ namespace Long {
 		virtual std::string ToString() const { return GetName(); }
 
 		bool IsInCategory(EventCategory category)
-		{
+		{ 
 			return GetCategoryFlags() & category;
 		}
 	protected: 

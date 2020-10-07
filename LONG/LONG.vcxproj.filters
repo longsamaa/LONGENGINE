@@ -1,54 +1,75 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Long">
+      <UniqueIdentifier>{15A3887C-01DA-890D-AAC6-6F1096DC050F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Long\Events">
+      <UniqueIdentifier>{5965EF2A-C51A-6820-4E0F-62F7BAC35E24}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Long\Platform">
+      <UniqueIdentifier>{09277CC0-75E7-F7F6-3E22-4174AAA13CD3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Long\Platform\Windows">
+      <UniqueIdentifier>{43CA2010-AF36-DC0A-782A-7468E455FE72}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Long.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Long.h" />
     <ClInclude Include="src\Long\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\Core.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\EntryPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Long\Log.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\Events\ApplicationEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\Events\Event.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\Events\KeyEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Long\Events\MouseEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Long\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Long\Log.h">
+      <Filter>Long</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Long\Platform\Windows\WindowsWindow.h">
+      <Filter>Long\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Long\Window.h">
+      <Filter>Long</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Longpch.h" />
+    <ClInclude Include="Layer.h">
+      <Filter>Long</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerStack.h">
+      <Filter>Long</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Long\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Long</Filter>
     </ClCompile>
     <ClCompile Include="src\Long\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Long</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Long\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Long\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Longpch.cpp" />
+    <ClCompile Include="Layer.cpp">
+      <Filter>Long</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerStack.cpp">
+      <Filter>Long</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
