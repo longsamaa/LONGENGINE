@@ -4,6 +4,8 @@
 #include "Long/Events/KeyEvent.h"
 #include "Long/Events/MouseEvent.h"
 #include "Long/Events/ApplicationEvent.h"
+#include <glad/glad.h>
+
 
 namespace Long
 {
@@ -49,7 +51,9 @@ namespace Long
 
 		WindowsWindow::m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), nullptr, nullptr); 
 		glfwMakeContextCurrent(WindowsWindow::m_Window); 
-		glfwSetWindowUserPointer(WindowsWindow::m_Window, &(WindowsWindow::m_Data)); 
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		LONG_CORE_ASSERT(status, "Failed to initialize Glad"); 
+		glfwSetWindowUserPointer(WindowsWindow::m_Window, &(WindowsWindow::m_Data));
 		WindowsWindow::SetVSync(true); 
 		
 
@@ -96,6 +100,13 @@ namespace Long
 				}
 			}
 		});
+		//Set char callback
+		glfwSetCharCallback(WindowsWindow::m_Window, [](GLFWwindow* window, unsigned int keycode)
+		{
+			WindowsWindow::WindowData& data = *(WindowsWindow::WindowData*)glfwGetWindowUserPointer(window);
+			Long::KeyTypedEvent event(keycode); 
+			data.EventCallback(event); 
+		}); 
 		//set mouse button callback
 		glfwSetMouseButtonCallback(WindowsWindow::m_Window, [](GLFWwindow* window,int button, int action, int modes)
 		{

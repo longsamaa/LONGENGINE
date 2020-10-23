@@ -4,3 +4,6 @@
 [submodule "LONG/vendor/GLFW"]
 	path = LONG/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "LONG/vendor/imgui"]
+	path = LONG/vendor/imgui
+	url = https://github.com/TheCherno/imgui

@@ -108,4 +108,17 @@ namespace Long {
 		}
 		EVENT_CLASS_TYPE(KeyReleased);
 	};
+
+	class LONG_API KeyTypedEvent : public KeyEvent
+	{
+	public: 
+		KeyTypedEvent(const int keycode) : KeyEvent(keycode) {}
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyTypedEvent Event :" << m_KeyCode;
+			return ss.str();
+		}
+		EVENT_CLASS_TYPE(KeyTyped);
+	};
 }

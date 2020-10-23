@@ -13,6 +13,12 @@
     <Filter Include="Long\Platform\Windows">
       <UniqueIdentifier>{43CA2010-AF36-DC0A-782A-7468E455FE72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Long\ImGui">
+      <UniqueIdentifier>{ab086003-f28d-4475-acb2-f09b07f33403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Long\Platform\OpenGL">
+      <UniqueIdentifier>{982ae04d-3623-4c36-b20a-9ad7c5611d85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Long.h" />
@@ -37,6 +43,12 @@
     <ClInclude Include="src\Long\Events\MouseEvent.h">
       <Filter>Long\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Long\Layer.h">
+      <Filter>Long</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Long\LayerStack.h">
+      <Filter>Long</Filter>
+    </ClInclude>
     <ClInclude Include="src\Long\Log.h">
       <Filter>Long</Filter>
     </ClInclude>
@@ -47,15 +59,21 @@
       <Filter>Long</Filter>
     </ClInclude>
     <ClInclude Include="src\Longpch.h" />
-    <ClInclude Include="Layer.h">
-      <Filter>Long</Filter>
+    <ClInclude Include="vendor\imgui\examples\imgui_impl_opengl3.h">
+      <Filter>Long\Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="LayerStack.h">
-      <Filter>Long</Filter>
+    <ClInclude Include="ImGuiLayer.h">
+      <Filter>Long\ImGui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Long\Application.cpp">
+      <Filter>Long</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Long\Layer.cpp">
+      <Filter>Long</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Long\LayerStack.cpp">
       <Filter>Long</Filter>
     </ClCompile>
     <ClCompile Include="src\Long\Log.cpp">
@@ -65,11 +83,11 @@
       <Filter>Long\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Longpch.cpp" />
-    <ClCompile Include="Layer.cpp">
-      <Filter>Long</Filter>
+    <ClCompile Include="vendor\imgui\examples\imgui_impl_opengl3.cpp">
+      <Filter>Long\Platform\OpenGL</Filter>
     </ClCompile>
-    <ClCompile Include="LayerStack.cpp">
-      <Filter>Long</Filter>
+    <ClCompile Include="ImGuiLayer.cpp">
+      <Filter>Long\ImGui</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

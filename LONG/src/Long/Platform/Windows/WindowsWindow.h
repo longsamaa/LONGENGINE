@@ -4,7 +4,6 @@
 //#include "Hazel/Renderer/GraphicsContext.h"
 
 #include "Long/Window.h"
-
 #include <GLFW/glfw3.h>
 
 namespace Long {

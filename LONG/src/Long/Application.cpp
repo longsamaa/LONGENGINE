@@ -1,13 +1,14 @@
 #include "Longpch.h"
 #include "Application.h"
 #include "Log.h"
-#include "GLFW/glfw3.h"
-
-#define BIND_EVENT_FN(x) std::bind(&x,this, std::placeholders::_1)
+#include <glad/glad.h>
 
 namespace Long {
+	Application* Application::s_Instance = nullptr; 
 	Application::Application() 
 	{
+		s_Instance = this; 
+		LONG_CORE_ASSERT(!s_Instance, "Application already exists!"); 
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent)); 
 	}
@@ -61,10 +62,12 @@ namespace Long {
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer); 
+		layer->OnAttach(); 
 	}
 
 	void Application::PushOverlay(Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay); 
+		overlay->OnAttach();
 	}
 }
